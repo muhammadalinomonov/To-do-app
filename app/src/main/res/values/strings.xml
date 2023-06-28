@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">To do app</string>
+    <string-array name="intro_titles">
+        <item>Manage your tasks</item>
+        <item>Create daily routine</item>
+        <item>Organized your tasks</item>
+    </string-array>
+
+    <string-array name="intro_subtitles">
+        <item>You can easily manage all of your daily tasks in DoMe for free</item>
+        <item>In Uptodo  you can create your personalized routine to stay productive</item>
+        <item>You can organize your daily tasks by adding your tasks into separate categories</item>
+    </string-array>
+
+    <string-array name="status_tasks">
+        <item>All tasks</item>
+        <item>Completed</item>
+        <item>Incomplete</item>
+    </string-array>
+    <string name="completed_task_message">Did you actually incomplete the task?</string>
+    <string name="in_completed_task_message">Did you actually complete the task?</string>
+
+</resources>

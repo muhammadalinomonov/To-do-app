@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="uz.gita.todoapp.presentation.screen.splash.SplashScreen"
+        android:label="SplashScreen"
+        tools:layout="@layout/screen_splash">
+        <action
+            android:id="@+id/action_splashScreen_to_introScreen"
+            app:destination="@id/introScreen"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/introScreen"
+        android:name="uz.gita.todoapp.presentation.screen.intro.IntroScreen"
+        android:label="IntroScreen"
+        tools:layout="@layout/screen_intro">
+        <action
+            android:id="@+id/action_introScreen_to_homeScreen"
+            app:destination="@id/homeScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popUpTo="@id/introScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.gita.todoapp.presentation.screen.home.HomeScreen"
+        android:label="HomeScreen"
+        tools:layout="@layout/screen_home">
+        <action
+            android:id="@+id/action_homeScreen_to_addTaskScreen"
+            app:destination="@id/addTaskScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_homeScreen_to_updateScreen"
+            app:destination="@id/updateScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskScreen"
+        android:name="uz.gita.todoapp.presentation.screen.addtask.AddTaskScreen"
+        android:label="AddTaskScreen" />
+    <fragment
+        android:id="@+id/updateScreen"
+        android:name="uz.gita.todoapp.presentation.screen.update.UpdateScreen"
+        android:label="UpdateScreen">
+        <argument
+            android:name="taskEntity"
+            app:argType="uz.gita.todoapp.data.room.entity.TaskEntity" />
+    </fragment>
+</navigation>

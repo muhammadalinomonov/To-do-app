@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/all_tasks"
+        android:title="All tasks"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/completed"
+        android:title="Completed"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/incomplete"
+        android:title="Incomplete"
+        tools:ignore="HardcodedText" />
+
+    <item
+        android:id="@+id/about_app"
+        android:title="About app"
+        tools:ignore="HardcodedText" />
+
+
+</menu>
